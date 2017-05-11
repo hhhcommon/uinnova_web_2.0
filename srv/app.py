@@ -1,4 +1,4 @@
-#!flask/bin/python
+#!/usr/bin/python
 from flask import Flask, jsonify
 from flask import request
 import logging
@@ -11,6 +11,7 @@ app = Flask(__name__)
 def index():
     return "Hello, World!"
 
+## curl -i -H "Content-Type: application/json" -X POST -d '{"title":"Read a book"}' http://uinnova.com:9009/form
 @app.route('/form', methods=['POST'])
 def get_form_details():
     content = request.get_json()
