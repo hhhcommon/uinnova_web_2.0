@@ -47,6 +47,33 @@
 			e.preventDefault();
 			window.location.href = "/";
 		});
+
+
+		$("#contact_us").on("submit", function () {
+			var data = {
+				name: $("#contact_form_name").val(),
+				phone: $("#contact_form_phone").val(),
+				email: $("#contact_form_email").val(),
+				company: $("#contact_form_company").val(),
+				department: $("#contact_form_department").val(),
+				message: $("#contact_form_message").val(),
+			};
+			$.ajax({
+				url: "http://uinnova.com:9009/form",
+				method: "POST",
+				timeout: "5000",
+				async: true,
+				data: JSON.stringify(data),
+				contentType: "application/json",
+				success: function (ret) {
+					$('#contactModalSuccess').modal('show');
+				},
+				error: function (ret) {
+					$('#contactModalFail').modal('show');
+				}
+			});
+			return false;
+		})
 	}); // End document ready
 
 })(this.jQuery);

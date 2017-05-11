@@ -191,8 +191,9 @@
 														<a href="gallery_index" class="active dropdown-toggle" data-toggle="dropdown">Get Started</a>
 														<ul class="dropdown-menu">
 															<li><a href="gallery_index">Create 3D Scene</a></li>
-															
-															<li><a href="api">Develop IoT App</a></li><li><a href="deploy">Deploy</a></li>
+
+															<li><a href="api">Develop IoT App</a></li>
+															<li><a href="deploy">Deploy</a></li>
 														</ul>
 													</li>
 
@@ -278,61 +279,63 @@
 
 					<!-- main start -->
 					<!-- ================ -->
-					<div class="main col-md-8 col-md-offset-2  space-bottom">
-						<div class="alert alert-success hidden" id="MessageSent">
-							We have received your message, we will contact you very soon.
+					<form id="contact_us">
+						<div class="main col-md-8 col-md-offset-2  space-bottom">
+							<div class="alert alert-success hidden" id="MessageSent">
+								We have received your message, we will contact you very soon.
+							</div>
+							<div class="alert alert-danger hidden" id="MessageNotSent">
+								Oops! Something went wrong, please verify that you are not a robot or refresh the page and try again.
+							</div>
+
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group has-feedback">
+										<label class="control-label">Name*</label>
+										<input id="contact_form_name" type="text" class="form-control">
+										<i class="fa fa-user form-control-feedback"></i>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group has-feedback">
+										<label class="control-label">Phone*</label>
+										<input id="contact_form_phone" type="text" class="form-control">
+										<i class="fa fa-phone form-control-feedback"></i>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-group has-feedback">
+										<label class="control-label">Email*</label>
+										<input id="contact_form_email" type="text" class="form-control">
+										<i class="fa fa-envelope form-control-feedback"></i>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group has-feedback">
+										<label class="control-label">Company*</label>
+										<input id="contact_form_company" type="text" class="form-control">
+										<i class="fa fa-building form-control-feedback"></i>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-group has-feedback">
+										<label class="control-label">Department</label>
+										<input id="contact_form_department" type="text" class="form-control">
+										<i class="fa fa-sitemap form-control-feedback"></i>
+									</div>
+								</div>
+
+								<div class="col-md-12 pv">
+
+									<label>Message*</label>
+									<textarea id="contact_form_message" class="form-control" rows="5"></textarea>
+									<button type="submit" class="btn btn-default">Submit</button>
+								</div>
+							</div>
 						</div>
-						<div class="alert alert-danger hidden" id="MessageNotSent">
-							Oops! Something went wrong, please verify that you are not a robot or refresh the page and try again.
-						</div>
-
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group has-feedback">
-									<label class="control-label">Name*</label>
-									<input type="text" class="form-control">
-									<i class="fa fa-user form-control-feedback"></i>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group has-feedback">
-									<label class="control-label">Phone*</label>
-									<input type="password" class="form-control">
-									<i class="fa fa-phone form-control-feedback"></i>
-								</div>
-							</div>
-
-							<div class="col-md-6">
-								<div class="form-group has-feedback">
-									<label class="control-label">Email*</label>
-									<input type="text" class="form-control">
-									<i class="fa fa-envelope form-control-feedback"></i>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group has-feedback">
-									<label class="control-label">Company*</label>
-									<input type="password" class="form-control">
-									<i class="fa fa-building form-control-feedback"></i>
-								</div>
-							</div>
-
-							<div class="col-md-6">
-								<div class="form-group has-feedback">
-									<label class="control-label">Department</label>
-									<input type="text" class="form-control">
-									<i class="fa fa-sitemap form-control-feedback"></i>
-								</div>
-							</div>
-
-							<div class="col-md-12 pv">
-
-								<label>Message*</label>
-								<textarea class="form-control" rows="3"></textarea>
-								<button type="submit" class="btn btn-default">Submit</button>
-							</div>
-						</div>
-					</div>
+					</form>
 					<!-- main end -->
 
 				</div>
@@ -340,11 +343,49 @@
 		</section>
 		<!-- main-container end -->
 
-		<!-- section start -->
-		<!-- ================ -->
 
-		<!-- section end -->
+		<!-- Modal -->
+		<div class="modal fade" id="contactModalSuccess" tabindex="-1" role="dialog" aria-labelledby="Contact Submit" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title" id="contactConfirm">Message</h4>
+					</div>
+					<div class="modal-body">
+						<p>Thank you for your Inquiry</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-sm btn-dark" data-dismiss="modal" onclick="redirect()">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
+		<div class="modal fade" id="contactModalFail" tabindex="-1" role="dialog" aria-labelledby="Contact Submit" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title" id="contactConfirm">Message</h4>
+					</div>
+					<div class="modal-body">
+						<p>Fail to post inquiry, please try again.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-sm btn-dark" data-dismiss="modal" onclick="redirect()">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			function redirect() {
+				var url = "/";
+				window.location.href = 'index';
+			}
+		</script>
+		
 		<!-- section start -->
 		<!-- ================ -->
 
