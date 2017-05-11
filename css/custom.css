@@ -17,3 +17,8 @@ File Description: Place here your custom CSS styles
     max-width: 75%;
     height: auto;
 }
+
+.uinnova     {
+    max-width: 80% !important;
+    height: auto;
+}
