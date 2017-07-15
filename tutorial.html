@@ -134,7 +134,7 @@
 
 								<!-- logo -->
 								<div id="logo" class="logo">
-									<a href="index.html"><img id="logo_img" src="images/img/logo_light_blue.png" alt="The Project"></a>
+									<a href="/"><img id="logo_img" src="images/logo/logo_en_b.png" alt="The Project"></a>
 								</div>
 
 								<!-- name-and-slogan -->
@@ -182,14 +182,15 @@
 												<ul class="nav navbar-nav ">
 
 													<li class=" mega-menu ">
-														<a href="index.html" class="dropdown-toggle">Home</a>
+														<a href="index" class="dropdown-toggle">Home</a>
 													</li>
 													<li class="dropdown ">
 														<a href="gallery_index" class="active dropdown-toggle" data-toggle="dropdown">Get Started</a>
 														<ul class="dropdown-menu">
+															<li><a href="howitworks">How It Works</a></li>
 															<li><a href="gallery_index">Create 3D Scene</a></li>
-															
-															<li><a href="api">Develop IoT App</a></li><li><a href="deploy">Deploy</a></li>
+															<li><a href="api">Develop IoT Application</a></li>
+															<li><a href="deploy">Deploy Your Solution</a></li>
 														</ul>
 													</li>
 													<!-- mega-menu end -->
@@ -197,28 +198,28 @@
 													<li class="dropdown ">
 														<a href="case" class="dropdown-toggle" data-toggle="dropdown">Solutions</a>
 														<ul class="dropdown-menu">
-															<li><a href="case-dc">Datacenter</a></li>
-															<li><a href="case-fireprotection">Firefighting</a></li>
-															<li><a href="case-archive">Archive  Center</a></li>
-															<li><a href="case-port">Port & Harbor</a></li>
-															<li><a href="case-granary">Granary</a></li>
-															<li><a href="case-hospital">Hospital</a></li>
-															<li><a href="case-market">Shopping Mall</a></li>
-															<li><a href="case-thesubway">Subway Station</a></li>
-															<li><a href="case-campus">Campus</a></li>
+															<li><a href="case-dc">Datacenter Visualization</a></li>
+															<li class="dropdown">
+																<a class="dropdown-toggle" data-toggle="dropdown" href="case">Industrial Solutions</a>
+																<ul class="dropdown-menu">
+																	<li><a href="case-fireprotection">Firefighting</a></li>
+																	<li><a href="case-archive">Archive  Center</a></li>
+																	<li><a href="case-port">Port & Harbor</a></li>
+																	<li><a href="case-granary">Granary</a></li>
+																	<li><a href="case-hospital">Hospital</a></li>
+																	<li><a href="case-market">Shopping Mall</a></li>
+																	<li><a href="case-thesubway">Subway Station</a></li>
+																	<li><a href="case-campus">School Campus</a></li>
+																</ul>
+															</li>
 														</ul>
-													</li>
-
-													<li class="mega-menu  ">
-														<a href="price" class="dropdown-toggle">Price</a>
-
 													</li>
 													<!-- mega-menu end -->
 													<li class="dropdown ">
 														<a class="dropdown-toggle" href="about_uinnova">About</a>
 														<ul class="dropdown-menu">
-															<li><a href="about_uinnova">Company</a></li>
-															
+															<li><a href="about_uinnova">About Us</a></li>
+
 															<li><a href="about_partner">Partners</a></li>
 
 															<li><a href="about_contact">Contact Us</a></li>
@@ -228,6 +229,10 @@
 
 												</ul>
 												<!-- main-menu end -->
+
+												<div class="header-dropdown-buttons">
+													<a href="http://uinnova.cn" class="btn btn-sm hidden-xs btn-default">中 文 &nbsp; <i class="fa fa-globe" aria-hidden="false"></i></a>
+												</div>
 
 												<!-- header buttons -->
 												<!-- <div class="header-dropdown-buttons">
@@ -337,7 +342,8 @@
 										</div>
 										<div id="collapseOne" class="panel-collapse collapse">
 											<div class="panel-body">
-												Our API uses javascript-like syntax but is different from Javascript. For examples, our API does not offer documented objects or windows objects.
+												Our API uses javascript-like syntax but is different from Javascript. For examples, our API does not offer documented objects
+												or windows objects.
 											</div>
 										</div>
 									</div>
@@ -351,7 +357,7 @@
 										</div>
 										<div id="collapseTwo" class="panel-collapse collapse">
 											<div class="panel-body">
-												Open <a href="http://uinnova.com:9010">online</a> API development page by <b>IE 11</b>, type in <b>scene ID</b> and click the 'New' button.
+												Open <a href="http://uinnova.com:9010">online</a> API development page by <b>IE 11</b>, type in <b>scene ID</b>												and click the 'New' button.
 											</div>
 										</div>
 									</div>
@@ -379,7 +385,8 @@
 										</div>
 										<div id="collapseFour" class="panel-collapse collapse">
 											<div class="panel-body">
-												Objects are given animations whilst they are created. Objects without an animation associated to them will not be able to play an animation.
+												Objects are given animations whilst they are created. Objects without an animation associated to them will not be able to
+												play an animation.
 											</div>
 										</div>
 									</div>
@@ -393,33 +400,36 @@
 										</div>
 										<div id="collapseFive" class="panel-collapse collapse">
 											<div class="panel-body">
-												Our API debugging process requires 3D capabilities which can be consuming on certain computers. Opening more than one scene at a time may slow your computer down or even crash your browser in certain cases. We recommend that you only open 3 or less scenes simultaneously.
+												Our API debugging process requires 3D capabilities which can be consuming on certain computers. Opening more than one scene
+												at a time may slow your computer down or even crash your browser in certain cases. We recommend that you only
+												open 3 or less scenes simultaneously.
+											</div>
 										</div>
-									</div>
-									<div class="panel panel-default">
-										<div class="panel-heading">
-											<h4 class="panel-title">
-												<a data-toggle="collapse" data-parent="#accordion-faq" href="#collapseSix" class="collapsed">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordion-faq" href="#collapseSix" class="collapsed">
 														<i class="fa fa-question-circle pr-10"></i> Where I could write and debug my API code ？
 													</a>
-											</h4>
-										</div>
-										<div id="collapseSix" class="panel-collapse collapse">
-											<div class="panel-body">
-												Please visit <a href="http://uinnova.com:9010">online</a> API development page using <b>IE 11</b> to debug your code
+												</h4>
+											</div>
+											<div id="collapseSix" class="panel-collapse collapse">
+												<div class="panel-body">
+													Please visit <a href="http://uinnova.com:9010">online</a> API development page using <b>IE 11</b> to debug your
+													code
+												</div>
 											</div>
 										</div>
 									</div>
+									<!-- accordion end -->
 								</div>
-								<!-- accordion end -->
+
 							</div>
-
 						</div>
-					</div>
-					<!-- main end -->
+						<!-- main end -->
 
+					</div>
 				</div>
-			</div>
 		</section>
 		<!-- main-container end -->
 
@@ -439,11 +449,11 @@
 						<div class="row">
 							<div class="col-md-6 col-md-offset-3">
 								<div class="footer-content text-center padding-ver-clear">
-									<div class="logo-footer"><img id="logo-footer" class="center-block" src="images/img/logo_light_blue.png" alt=""></div>
+									<div class="logo-footer"><img id="logo-footer" class="center-block" src="images/logo/logo_en_b.png" alt=""></div>
 
 									<ul class="list-inline mb-20">
 										<li><i class="text-default fa fa-map-marker pr-5"></i>3040 78th Avenue SE #432, Mercer Island, WA. 98040 U.S.A. </li>
-										<li><a href="tel:+00 1234567890" class="link-dark"><i class="text-default fa fa-phone pl-10 pr-5"></i>(+1) 425-221-9262 </a></li>
+										<li><a href="tel:(+1) 425-221-9262" class="link-dark"><i class="text-default fa fa-phone pl-10 pr-5"></i>(+1) 425-221-9262 </a></li>
 										<li><a href="mailto:info_us@uinnova.com" class="link-dark"><i class="text-default fa fa-envelope-o pl-10 pr-5"></i>info_us@uinnova.com</a></li>
 									</ul>
 									<ul class="social-links circle animated-effect-1 margin-clear">
