@@ -1,0 +1,8 @@
+<launcher version="1.2.1.420" url="http://uinnova.com/mmdclient/mmd-v1.2.1.420-en.exe"></launcher>
+<apps launch="MMDClient">
+	<app name="MMDClient"  	url="http://uinnova.com/mmdclient/MMDClient-v1.0.420.zip" version="1.0.420" entry="nw.exe" param="./WebContent"/>
+	<app name="VLC"  	url="http://uinnova.com/mmdclient/vlc-2.2.1.zip" version="2.2.1" entry="vlc.exe" install="vlc-2.2.1-win32.exe" installParam="/S"/>
+	<app name="uBuilder"  	url="http://uinnova.com/mmdclient/uBuilder-v0.10.420.zip" version="0.10.420"  entry="uBuilder.exe"/>
+	<app name="WebContent"  	url="http://uinnova.com/mmdclient/WebContent-v1.0.420.zip" version="1.0.420"  entry="package.json"/>
+	<app name="MMDPostDebugger"  	url="http://uinnova.com/mmdclient/MMDPostDebugger-v0.1.420.zip" version="0.1.420" entry="MMDPostDebugger.exe"/>
+</apps>
